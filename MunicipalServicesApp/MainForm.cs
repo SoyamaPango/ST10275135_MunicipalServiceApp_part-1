@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MunisipaServiceApp;
 
 namespace MunicipalServicesApp.Forms
 {
@@ -7,15 +8,17 @@ namespace MunicipalServicesApp.Forms
     {
         public MainForm()
         {
-            InitializeComponent();
-            ApplyDesign();
+            InitializeComponent();   // Designer builds the controls
+            ApplyDesign();           // Apply styling/text
         }
 
         private void ApplyDesign()
         {
-            // Consistent, clear UI (rubric: design considerations)
+            // Consistent UI (rubric requirement)
             this.Text = "Municipal Services – Main Menu";
             this.MinimumSize = new System.Drawing.Size(560, 360);
+
+            // These labels already exist in Designer
             lblTitle.Text = "Municipal Services Application";
             lblSubtitle.Text = "Choose a task to continue";
         }
@@ -37,6 +40,13 @@ namespace MunicipalServicesApp.Forms
         {
             MessageBox.Show("Service Request Status will be implemented in Part 3.",
                 "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            DashboardForm dashboard = new DashboardForm();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

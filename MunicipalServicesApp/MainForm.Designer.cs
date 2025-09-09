@@ -9,6 +9,7 @@
         private System.Windows.Forms.Button btnReportIssues;
         private System.Windows.Forms.Button btnEvents;
         private System.Windows.Forms.Button btnServiceStatus;
+        private System.Windows.Forms.Button btnDashboard; // ✅ Add declaration
 
         protected override void Dispose(bool disposing)
         {
@@ -23,6 +24,8 @@
             this.btnReportIssues = new System.Windows.Forms.Button();
             this.btnEvents = new System.Windows.Forms.Button();
             this.btnServiceStatus = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button(); // ✅ Initialize
+
             this.SuspendLayout();
             // 
             // lblTitle
@@ -84,12 +87,25 @@
             this.btnServiceStatus.UseVisualStyleBackColor = true;
             this.btnServiceStatus.Click += new System.EventHandler(this.btnServiceStatus_Click);
             // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDashboard.Location = new System.Drawing.Point(160, 270);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(220, 40);
+            this.btnDashboard.TabIndex = 5;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(544, 311);
+            this.ClientSize = new System.Drawing.Size(544, 350);
+            this.Controls.Add(this.btnDashboard); // ✅ Add control to form
             this.Controls.Add(this.btnServiceStatus);
             this.Controls.Add(this.btnEvents);
             this.Controls.Add(this.btnReportIssues);

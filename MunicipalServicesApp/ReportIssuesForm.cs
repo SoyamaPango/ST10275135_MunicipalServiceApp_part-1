@@ -127,7 +127,7 @@ namespace MunicipalServicesApp.Forms
 
             // Engagement feature: progress & positive feedback (rubric)
             progressBar.Value = Math.Min(progressBar.Value + 34, 100);
-            lblEngagement.Text = $"Thank you! {IssueRepository.Count} issue(s) submitted. You're making a difference.";
+            lblEngagement.Text = "You have reported " + IssueRepository.Count() + " issues.";
 
             MessageBox.Show("Issue reported successfully!", "Success",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

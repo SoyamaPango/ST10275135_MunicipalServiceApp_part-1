@@ -8,15 +8,21 @@ namespace MunicipalServicesApp.Services
     /// </summary>
     public static class IssueRepository
     {
-        private static readonly List<Issue> _issues = new List<Issue>();
-
-        public static IReadOnlyList<Issue> All => _issues.AsReadOnly();
+        private static List<Issue> issues = new List<Issue>();
 
         public static void Add(Issue issue)
         {
-            _issues.Add(issue);
+            issues.Add(issue);
         }
 
-        public static int Count => _issues.Count;
+        public static List<Issue> GetAll()
+        {
+            return issues;
+        }
+
+        public static int Count()
+        {
+            return issues.Count;
+        }
     }
 }
