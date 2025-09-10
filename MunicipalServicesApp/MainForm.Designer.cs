@@ -3,13 +3,15 @@
     partial class MainForm
     {
         private System.ComponentModel.IContainer components = null;
-
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSubtitle;
+        private System.Windows.Forms.FlowLayoutPanel menuPanel;
         private System.Windows.Forms.Button btnReportIssues;
         private System.Windows.Forms.Button btnEvents;
         private System.Windows.Forms.Button btnServiceStatus;
-        private System.Windows.Forms.Button btnDashboard; // ✅ Add declaration
+        private System.Windows.Forms.Button btnDashboard;
 
         protected override void Dispose(bool disposing)
         {
@@ -19,103 +21,121 @@
 
         private void InitializeComponent()
         {
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
+            this.menuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnReportIssues = new System.Windows.Forms.Button();
             this.btnEvents = new System.Windows.Forms.Button();
             this.btnServiceStatus = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button(); // ✅ Initialize
-
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.headerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.menuPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
+
+            // headerPanel
+            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(10, 90, 138);
+            this.headerPanel.Controls.Add(this.picLogo);
+            this.headerPanel.Controls.Add(this.lblTitle);
+            this.headerPanel.Controls.Add(this.lblSubtitle);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Height = 100;
+            this.headerPanel.Name = "headerPanel";
+
+            // picLogo
+            this.picLogo.Image = Properties.Resources.Bayview_flag; // fake flag 
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.Location = new System.Drawing.Point(20, 15);
+            this.picLogo.Size = new System.Drawing.Size(70, 70);
+            this.picLogo.TabStop = false;
+
             // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(65, 30);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(100, 15);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(407, 30);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Municipal Services Application";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            this.lblTitle.Size = new System.Drawing.Size(500, 35);
+            this.lblTitle.Text = "Bayview Metropolitan Municipality";
+
             // lblSubtitle
-            // 
-            this.lblSubtitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSubtitle.AutoSize = true;
             this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblSubtitle.Location = new System.Drawing.Point(185, 70);
+            this.lblSubtitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSubtitle.Location = new System.Drawing.Point(102, 55);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(177, 19);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "Choose a task to continue";
-            // 
+            this.lblSubtitle.Size = new System.Drawing.Size(400, 25);
+            this.lblSubtitle.Text = "Digital Citizen Services Portal";
+
+            // menuPanel
+            this.menuPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.menuPanel.WrapContents = false;
+            this.menuPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(180, 255, 255, 255); 
+            this.menuPanel.Location = new System.Drawing.Point(
+                (600 - 340) / 2,  
+                (400 - 300) / 2   
+            );
+            this.menuPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.menuPanel.Controls.Add(this.btnReportIssues);
+            this.menuPanel.Controls.Add(this.btnEvents);
+            this.menuPanel.Controls.Add(this.btnServiceStatus);
+            this.menuPanel.Controls.Add(this.btnDashboard);
+
             // btnReportIssues
-            // 
-            this.btnReportIssues.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnReportIssues.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnReportIssues.Location = new System.Drawing.Point(160, 120);
-            this.btnReportIssues.Name = "btnReportIssues";
-            this.btnReportIssues.Size = new System.Drawing.Size(220, 40);
-            this.btnReportIssues.TabIndex = 2;
             this.btnReportIssues.Text = "Report Issues";
-            this.btnReportIssues.UseVisualStyleBackColor = true;
+            this.btnReportIssues.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnReportIssues.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReportIssues.Margin = new System.Windows.Forms.Padding(10);
+            this.btnReportIssues.Size = new System.Drawing.Size(300, 50);
             this.btnReportIssues.Click += new System.EventHandler(this.btnReportIssues_Click);
-            // 
+
             // btnEvents
-            // 
-            this.btnEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEvents.Enabled = false; // rubric: disable future tasks
-            this.btnEvents.Location = new System.Drawing.Point(160, 175);
-            this.btnEvents.Name = "btnEvents";
-            this.btnEvents.Size = new System.Drawing.Size(220, 36);
-            this.btnEvents.TabIndex = 3;
             this.btnEvents.Text = "Local Events & Announcements";
-            this.btnEvents.UseVisualStyleBackColor = true;
+            this.btnEvents.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEvents.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvents.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnEvents.FlatAppearance.BorderSize = 2;
+            this.btnEvents.Margin = new System.Windows.Forms.Padding(10);
+            this.btnEvents.Size = new System.Drawing.Size(300, 50);
             this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
-            // 
+
             // btnServiceStatus
-            // 
-            this.btnServiceStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnServiceStatus.Enabled = false; // rubric: disable future tasks
-            this.btnServiceStatus.Location = new System.Drawing.Point(160, 220);
-            this.btnServiceStatus.Name = "btnServiceStatus";
-            this.btnServiceStatus.Size = new System.Drawing.Size(220, 36);
-            this.btnServiceStatus.TabIndex = 4;
             this.btnServiceStatus.Text = "Service Request Status";
-            this.btnServiceStatus.UseVisualStyleBackColor = true;
+            this.btnServiceStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnServiceStatus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnServiceStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServiceStatus.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnServiceStatus.FlatAppearance.BorderSize = 2;
+            this.btnServiceStatus.Margin = new System.Windows.Forms.Padding(10);
+            this.btnServiceStatus.Size = new System.Drawing.Size(300, 50);
             this.btnServiceStatus.Click += new System.EventHandler(this.btnServiceStatus_Click);
-            // 
+
             // btnDashboard
-            // 
-            this.btnDashboard.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnDashboard.Location = new System.Drawing.Point(160, 270);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(220, 40);
-            this.btnDashboard.TabIndex = 5;
             this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDashboard.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDashboard.FlatAppearance.BorderSize = 2;
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDashboard.Size = new System.Drawing.Size(300, 50);
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
+
             // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(544, 350);
-            this.Controls.Add(this.btnDashboard); // ✅ Add control to form
-            this.Controls.Add(this.btnServiceStatus);
-            this.Controls.Add(this.btnEvents);
-            this.Controls.Add(this.btnReportIssues);
-            this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.lblTitle);
-            this.Name = "MainForm";
+            this.BackgroundImage = Properties.Resources.gov;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.headerPanel);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
+            this.headerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.menuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
     }
 }

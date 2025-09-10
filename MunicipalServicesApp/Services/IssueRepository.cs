@@ -3,9 +3,7 @@ using MunicipalServicesApp.Models;
 
 namespace MunicipalServicesApp.Services
 {
-    /// <summary>
-    /// Central place to store reported issues (meets rubric: consistent use of List for data handling).
-    /// </summary>
+   
     public static class IssueRepository
     {
         private static List<Issue> issues = new List<Issue>();

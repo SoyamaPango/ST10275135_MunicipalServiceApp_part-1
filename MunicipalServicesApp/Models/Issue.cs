@@ -7,6 +7,8 @@
         public string Description { get; set; }
         public string AttachmentPath { get; set; }
 
+        public string SubmittedAt { get; set; }
+
         public override string ToString()
         {
             return $"{Category} @ {Location}";

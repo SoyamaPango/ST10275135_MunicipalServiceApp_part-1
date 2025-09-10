@@ -8,19 +8,20 @@ namespace MunicipalServicesApp.Forms
     {
         public MainForm()
         {
-            InitializeComponent();   // Designer builds the controls
-            ApplyDesign();           // Apply styling/text
+            InitializeComponent();
+            ApplyDesign();
         }
 
         private void ApplyDesign()
         {
-            // Consistent UI (rubric requirement)
-            this.Text = "Municipal Services – Main Menu";
-            this.MinimumSize = new System.Drawing.Size(560, 360);
+            this.Text = "Bayview Metropolitan Municipality – Main Menu";
+            this.MinimumSize = new System.Drawing.Size(600, 400);
 
-            // These labels already exist in Designer
-            lblTitle.Text = "Municipal Services Application";
-            lblSubtitle.Text = "Choose a task to continue";
+            this.BackgroundImage = Properties.Resources.gov;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
+            lblTitle.Text = "Bayview Metropolitan Municipality";
+            lblSubtitle.Text = "Digital Citizen Services Portal";
         }
 
         private void btnReportIssues_Click(object sender, EventArgs e)
@@ -32,15 +33,16 @@ namespace MunicipalServicesApp.Forms
 
         private void btnEvents_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Local Events & Announcements will be implemented in Part 2.",
+            MessageBox.Show("Local Events & Announcements will be available soon.",
                 "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnServiceStatus_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Service Request Status will be implemented in Part 3.",
+            MessageBox.Show("Service Request Status will be available soon.",
                 "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
