@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
+using MunicipalServicesApp.Forms;
 
 namespace MunicipalServicesApp
 {
-    internal static class Program
+    static class Program
     {
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.MainForm());
+
+            // Start with LoginForm
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -71,10 +71,11 @@
             this.menuPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.menuPanel.WrapContents = false;
             this.menuPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(180, 255, 255, 255); 
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(180, 255, 255, 255);
+            this.menuPanel.Size = new System.Drawing.Size(340, 300); 
             this.menuPanel.Location = new System.Drawing.Point(
-                (600 - 340) / 2,  
-                (400 - 300) / 2   
+                (600 - 340) / 2,
+                (400 - 300) / 2
             );
             this.menuPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.menuPanel.Controls.Add(this.btnReportIssues);

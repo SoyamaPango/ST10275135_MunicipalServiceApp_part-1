@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using MunisipaServiceApp;
+using MunicipalServicesApp;
 
 namespace MunicipalServicesApp.Forms
 {
